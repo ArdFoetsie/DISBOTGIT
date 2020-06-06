@@ -6,7 +6,7 @@ import json
 client = discord.Client()
 
 # token from https://discordapp.com/developers
-bot.login(proces.env.token);
+
 
 # bot is ready
 @client.event
@@ -27,4 +27,6 @@ async def on_message(message):
 	await message.content
 
 # start bot
+
+bot.login(proces.env.token);
 client.run(token)
