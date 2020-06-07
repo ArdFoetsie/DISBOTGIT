@@ -1,13 +1,14 @@
 import discord
 import requests
 import json
+import os
 
 # create discord client
 client = discord.Client()
 
-# token from https://discordapp.com/developers
+# token
 
-
+token = os.environ["token"]
 # bot is ready
 @client.event
 async def on_ready():
@@ -27,6 +28,4 @@ async def on_message(message):
 	await message.content
 
 # start bot
-
-bot.login(proces.env.token);
 client.run(token)
